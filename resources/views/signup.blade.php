@@ -150,6 +150,5 @@
             </div>
         </footer>
     </div>
-    <script type="text/javascript" src="{{asset('/assets/js/profile-img-preview.js')}}"></script>
 </body>
 </html>
