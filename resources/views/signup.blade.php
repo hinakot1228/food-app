@@ -23,13 +23,12 @@
                     </div>
                     <form method="POST" action="{{--{{ route('register') }} --}}">
                         @csrf
-                        <div class="profile-info">
-                            <div class="profile-left">
-                                {{-- 保留 --}}
-                                <div class="form-group">
-                                    <label for="image_at" class="form-label">{{ __('Image_at') }}</label>
-                                    <div class="profile-info">
-                                        <input id="image_at" type="text" class="form-control @error('image_at') is-invalid @enderror" name="image_at" value="{{ old('image_at') }}" required autocomplete="image_at" autofocus>
+                        <div class="signup-form">
+                            <div class="signup-left">
+                                <div class="signup-img-group">
+                                    <label for="image_at" class="form-label">プロフィール写真</label>
+                                    <div class="signup-image">
+                                        <input id="image_at" type="file" class="form-control  @error('image_at') is-invalid @enderror" name="image_at" value="{{ old('image_at') }}" required autocomplete="image_at" autofocus>
         
                                         @error('image_at')
                                             <span class="invalid-feedback" role="alert">
@@ -37,13 +36,14 @@
                                             </span>
                                         @enderror
                                     </div>
+                                    <div class="signup-img-preview">
+                                        <img src="http://placehold.jp/150x150.png" alt="" class="img-preview">
+                                    </div>
                                 </div>
-                                {{-- <input type="file"> --}}
-                                {{-- <img src="http://placehold.jp/100x100.png" alt="" class="profile-img"> --}}
                             </div>
-                            <div class="profile-right">
-                                <div class="form-group">
-                                    <label for="name" class="form-label">{{ __('Name') }}</label>
+                            <div class="signup-right">
+                                <div class="signup-info-group">
+                                    <label for="name" class="form-label">名前</label>
         
                                     <div class="profile-info">
                                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -55,10 +55,10 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="birth" class="form-label">{{ __('Birth') }}</label>
+                                <div class="signup-info-group">
+                                    <label for="birth" class="form-label">生年月日</label>
         
-                                    <div class="profile-info">
+                                    <div class="signup-info">
                                         <input id="birth" type="date" class="form-control @error('birth') is-invalid @enderror" name="birth" value="{{ old('birth') }}" required autocomplete="birth" autofocus>
         
                                         @error('birth')
@@ -68,10 +68,10 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="sex" class="form-label">{{ __('Sex') }}</label>
+                                <div class="signup-info-group">
+                                    <label for="sex" class="form-label">性別</label>
         
-                                    <div class="profile-info">
+                                    <div class="signup-info">
                                         {{-- 保留 --}}
                                         {{-- <input id="sex" type="text" class="form-control @error('sex') is-invalid @enderror" name="sex" value="{{ old('sex') }}" required autocomplete="sex" autofocus> --}}
 
@@ -86,10 +86,10 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="email" class="form-label">{{ __('E-Mail Address') }}</label>
+                                <div class="signup-info-group">
+                                    <label for="email" class="form-label">メールアドレス</label>
         
-                                    <div class="profile-info">
+                                    <div class="signup-info">
                                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
         
                                         @error('email')
@@ -99,10 +99,10 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="password" class="form-label">{{ __('Password') }}</label>
+                                <div class="signup-info-group">
+                                    <label for="password" class="form-label">パスワード</label>
         
-                                    <div class="profile-info">
+                                    <div class="signup-info">
                                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
         
                                         @error('password')
@@ -112,10 +112,17 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="words" class="form-label">{{ __('Words') }}</label>
+                                <div class="signup-info-group">
+                                    <label for="password-confirm" class="form-label">確認用パスワード</label>
         
                                     <div class="profile-info">
+                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                    </div>
+                                </div>
+                                <div class="signup-info-group">
+                                    <label for="words" class="form-label">一言</label>
+        
+                                    <div class="signup-info">
                                         <input id="words" type="text" class="form-control @error('comment') is-invalid @enderror" name="words" required autocomplete="new-password">
         
                                         @error('password')
@@ -125,19 +132,12 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="password-confirm" class="form-label">{{ __('Confirm Password') }}</label>
-        
-                                    <div class="profile-info">
-                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <div class="profile-btn">
-                            <button type="submit" class="btn">
+                        <div class="signup-btn">
+                            <a type="submit" class="btn signup-submit-btn">
                                 登録
-                            </button>
+                            </a>
                         </div>
                     </form>
                 </div>
@@ -150,5 +150,6 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="{{asset('/assets/js/profile-img-preview.js')}}"></script>
 </body>
 </html>

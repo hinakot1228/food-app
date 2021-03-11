@@ -72,10 +72,96 @@ header{
     color: white;
     background-color: #FF8E3C;
     padding: 3px 10px;
-    height:50px;
     border-radius:25px;
     font-size: 13px;
 }
+
+
+/*-------------------
+  サインアップ
+--------------------*/
+.signup-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.signup-left {
+    width: 40%;
+}
+.signup-img-group {
+    display: flex;
+    flex-direction: column;
+}
+.signup-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.signup-img-preview {
+    display: flex;
+    justify-content: center;
+}
+.img-preview {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+}
+.signup-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+.signup-info-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.form-control {
+    padding: 3px;
+}
+.form-label {
+    font-size: 15px;
+}
+.signup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.signup-submit-btn {
+    font-size: 15px;
+}
+
+/*-------------------
+  サインイン
+--------------------*/
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 125px;
+}
+.signin-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.signin-info {
+    margin-left: 40px;
+}
+.signin-btn-group {
+    display: flex;
+    justify-content: center;
+}
+.signin-btn {
+    padding-top: 20px;
+}
+.signin-submit-btn {
+    font-size: 15px;
+}
+
 
 /*---------------------------------
   footer
