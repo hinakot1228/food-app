@@ -11,7 +11,7 @@
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
-                <a href="#" class="header-logo">アプリ名</a>
+                <a href="#" class="header-logo">ペコログ</a>
             </div>
         </header>
 
@@ -84,7 +84,7 @@
 
         <footer>
             <div class="footer-wrapper">
-                <small>&copy; 2021 The greatest show MEN</small>
+                <small>&copy; 2021 2021 The Greatest Shokkatsu Men</small>
             </div>
         </footer>
     </div>
