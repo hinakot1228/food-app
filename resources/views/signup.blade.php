@@ -28,7 +28,7 @@
                                 <div class="signup-img-group">
                                     <label for="image_at" class="form-label">プロフィール写真</label>
                                     <div class="signup-image">
-                                        <input id="image_at" type="file" class="form-control  @error('image_at') is-invalid @enderror" name="image_at" value="{{ old('image_at') }}" required autocomplete="image_at" autofocus>
+                                        <input id="profile-img" type="file" accept="image/*" class="form-control  @error('image_at') is-invalid @enderror" name="image_at" value="{{ old('image_at') }}" required autocomplete="image_at" autofocus>
         
                                         @error('image_at')
                                             <span class="invalid-feedback" role="alert">
@@ -37,7 +37,7 @@
                                         @enderror
                                     </div>
                                     <div class="signup-img-preview">
-                                        <img src="http://placehold.jp/150x150.png" alt="" class="img-preview">
+                                        <img id="preview" src="{{asset('/assets/imgs/no_image.jpg')}}" class="img-preview">
                                     </div>
                                 </div>
                             </div>
@@ -150,5 +150,9 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="{{asset('/assets/js/imgpreview.js')}}"></script>
 </body>
 </html>
