@@ -134,6 +134,7 @@ header{
 .img-preview {
     height: 150px;
     width: 150px;
+    object-fit: cover;
     border-radius: 75px;
 }
 .signup-right {
