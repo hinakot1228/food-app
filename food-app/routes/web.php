@@ -13,21 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/storesindex', function () {
-    return view('storesIndex');
-});
-Route::get('/signup', function () {
-    return view('signup');
-});
-Route::get('/signin', function () {
-    return view('signin');
-});
-Route::get('/user', function () {
-    return view('user');
-});
-Route::get('/useredit', function () {
-    return view('userEdit');
-});
-Route::get('/reviewcreate', function () {
-    return view('reviewCreate');
+Route::get('/', function () {
+    return view('welcome');
 });
