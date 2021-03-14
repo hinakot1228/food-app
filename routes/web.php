@@ -22,3 +22,12 @@ Route::get('/signup', function () {
 Route::get('/signin', function () {
     return view('signin');
 });
+Route::get('/user', function () {
+    return view('user');
+});
+Route::get('/useredit', function () {
+    return view('userEdit');
+});
+Route::get('/reviewcreate', function () {
+    return view('reviewCreate');
+});
