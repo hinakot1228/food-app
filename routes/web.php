@@ -31,3 +31,9 @@ Route::get('/useredit', function () {
 Route::get('/reviewcreate', function () {
     return view('reviewCreate');
 });
+
+// レビュー作成画面のcreate機能
+// create.blade.phpの見た目を表示するためのルーティング
+Route::get('/reviewcreate', 'ReviewController@create')->name('reviews.create');
+// 保存処理
+Route::post('/reviewcreate', 'ReviewController@store')->name('reviews.store');

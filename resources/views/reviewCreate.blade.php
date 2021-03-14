@@ -21,7 +21,7 @@
                     <div class="main-heading">
                         <h2>レビュー作成</h2>
                     </div>
-                    <form method="POST" action="{{--{{ route('register') }} --}}">
+                    <form method="POST" action="{{ route('reviews.store') }}>
                         @csrf
                         <div class="signup-form">
                             <div class="signup-left">
@@ -132,7 +132,7 @@
                                 </div> --}}
                                 <div class="signup-info-group">
                                     <label for="words" class="form-label">コメント</label>
-                                    <textarea rows="10" cols="40"></textarea><br>
+                                    <textarea name="" rows="10" cols="40"></textarea><br>
                                     {{-- <div class="signup-info">
                                         <input id="words" type="textarea"  class="form-control @error('comment') is-invalid @enderror" name="words" required autocomplete="new-password">
         
