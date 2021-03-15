@@ -31,3 +31,11 @@ Route::get('/useredit', function () {
 Route::get('/reviewcreate', function () {
     return view('reviewCreate');
 });
+
+Route::get('/storecreate', function () {
+    return view('storeCreate');
+});
+
+Route::get('/store', function () {
+    return view('store');
+});
