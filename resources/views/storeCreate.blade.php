@@ -73,7 +73,7 @@
                                     <label for="price" class="form-label">予算</label>
         
                                     <div class="signup-info">
-                                        <input id="price" type="select" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number') }}" required autocomplete="number">
+                                        {{-- <input id="price" type="select" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number') }}" required autocomplete="number"> --}}
 
                                         <select name="genre" >
                                             <option value="選択肢1">500円未満</option>
@@ -97,7 +97,7 @@
                                     <label for="genre" class="form-label">ジャンル</label>
         
                                     <div class="signup-info">
-                                        <input id="genre" type="select" class="form-control @error('genre') is-invalid @enderror" name="genre" required autocomplete="new-password">
+                                        {{-- <input id="genre" type="select" class="form-control @error('genre') is-invalid @enderror" name="genre" required autocomplete="new-password"> --}}
 
                                         <select name="genre" >
                                             <option value="選択肢1">洋食</option>
@@ -121,7 +121,7 @@
                                     <label for="main-dish" class="form-label">主菜</label>
         
                                     <div class="profile-info">
-                                        <input id="main-dish" type="select" class="form-control" name="main-dish" required autocomplete="new-password">
+                                        {{-- <input id="main-dish" type="select" class="form-control" name="main-dish" required autocomplete="new-password"> --}}
 
                                         <select name="main-dish" >
                                             <option value="選択肢1">肉</option>

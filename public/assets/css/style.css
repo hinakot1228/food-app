@@ -107,6 +107,46 @@ header{
   .evaluation input[type='radio']:checked ~ label{
     color: #FF8E3C;
   }
+
+/*-------------------
+  店名の詳細情報
+--------------------*/
+
+  .stores-detail h2{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .detail-top{
+      display: flex;
+  }
+  /* .details-container{
+    width: 80%;
+    margin: 0 auto;
+  }*/
+
+  .detail-box{
+    width: 25%;
+    height: 150px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 20px;
+  }
+
+  .review-img{
+      border-radius: 50%;
+      margin-right: 20px;
+  }
+
+.detail-star p{
+    margin:5px 0;
+}
+  .detail{
+      display: flex;
+      /* justify-content: space-between; */
+      flex-wrap: wrap;
+  } 
 /*-------------------
   サインアップ
 --------------------*/
