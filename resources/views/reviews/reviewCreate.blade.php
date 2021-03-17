@@ -146,7 +146,7 @@
                             </div>
                         </div>
                         <div class="signup-btn">
-                            <input type="submit" class="btn signup-submit-btn" value="登録">
+                            <button type="submit" class="btn signup-submit-btn" value="登録"></button>
                         </div>
                     </form>
                 </div>

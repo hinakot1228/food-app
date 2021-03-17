@@ -28,6 +28,20 @@ Route::get('/user', function () {
 Route::get('/useredit', function () {
     return view('userEdit');
 });
+
+Route::get('/reviewcreate', function () {
+    return view('reviewCreate');
+});
+
+Route::get('/storecreate', function () {
+    return view('storeCreate');
+});
+
+Route::get('/store', function () {
+    return view('store');
+});
+
+
 // Route::get('/reviewcreate', function () {
 //     return view('reviewCreate');
 // });
@@ -38,6 +52,3 @@ Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create')
 // 保存処理
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
 
-// Route::get('/posts/create', 'PostController@create')->name('posts.create');
-// // 保存処理
-// Route::post('/posts', 'PostController@store')->name('posts.store');
