@@ -21,7 +21,7 @@
                     <div class="main-heading">
                         <h2>レビュー作成</h2>
                     </div>
-                    <form method="POST" action="{{--{{ route('register') }} --}}">
+                    <form method="POST" action="{{ route('reviews.store') }}">
                         @csrf
                         <div class="signup-form">
                             <div class="signup-left">
@@ -46,9 +46,9 @@
                                     <label for="date" class="form-label">来店日</label>
         
                                     <div class="signup-info">
-                                      <input id="birth" type="date" class="form-control @error('birth') is-invalid @enderror" name="birth" value="{{ old('birth') }}" required autocomplete="birth" autofocus>
+                                      <input id="date" type="date" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
       
-                                      @error('birth')
+                                      @error('date')
                                           <span class="invalid-feedback" role="alert">
                                               <strong>{{ $message }}</strong>
                                           </span>
@@ -58,15 +58,15 @@
                                 <div class="signup-info-group">
                                     <label for="review" class="form-label">評価</label>
                                     <div class="evaluation">
-                                        <input id="star1" type="radio" name="star" value="5" />
+                                        <input id="star1" type="radio" name="stars" value="5" />
                                         <label for="star1"><span class="outline"></span>★</label>
-                                        <input id="star2" type="radio" name="star" value="4" />
+                                        <input id="star2" type="radio" name="stars" value="4" />
                                         <label for="star2"><span class="outline"></span>★</label>
-                                        <input id="star3" type="radio" name="star" value="3" />
+                                        <input id="star3" type="radio" name="stars" value="3" />
                                         <label for="star3"><span class="outline"></span>★</label>
-                                        <input id="star4" type="radio" name="star" value="2" />
+                                        <input id="star4" type="radio" name="stars" value="2" />
                                         <label for="star4"><span class="outline"></span>★</label>
-                                        <input id="star5" type="radio" name="star" value="1" />
+                                        <input id="star5" type="radio" name="stars" value="1" />
                                         <label for="star5"><span class="outline"></span>★</label>
                                       </div>
                                     {{-- <div class="signup-info">
@@ -132,7 +132,7 @@
                                 </div> --}}
                                 <div class="signup-info-group">
                                     <label for="words" class="form-label">コメント</label>
-                                    <textarea rows="10" cols="40"></textarea><br>
+                                    <textarea name="comment" rows="10" cols="40"></textarea><br>
                                     {{-- <div class="signup-info">
                                         <input id="words" type="textarea"  class="form-control @error('comment') is-invalid @enderror" name="words" required autocomplete="new-password">
         
@@ -146,9 +146,7 @@
                             </div>
                         </div>
                         <div class="signup-btn">
-                            <a type="submit" class="btn signup-submit-btn">
-                                登録
-                            </a>
+                            <button type="submit" class="btn signup-submit-btn" value="登録"></button>
                         </div>
                     </form>
                 </div>
