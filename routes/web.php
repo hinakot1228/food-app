@@ -37,10 +37,13 @@ Route::get('/storecreate', function () {
     return view('storeCreate');
 });
 
+Route::get('/stores', function () {
+    return view('stores');
+});
+
 Route::get('/store', function () {
     return view('store');
 });
-
 
 // Route::get('/reviewcreate', function () {
 //     return view('reviewCreate');
@@ -51,4 +54,3 @@ Route::get('/store', function () {
 Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create');
 // 保存処理
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
-
