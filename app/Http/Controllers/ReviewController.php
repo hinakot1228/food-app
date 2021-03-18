@@ -10,8 +10,8 @@ class ReviewController extends Controller
 {
     public function index()
     {
-        $user = Review::all()->user()->name;
-        dd($user);
+        // $user = Review::find(1)->user->name;
+        // dd($user);
 
         $reviews = Review::all();
         return view('stores/store', ['reviews'=>$reviews]);
