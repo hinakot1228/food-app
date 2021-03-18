@@ -36,4 +36,18 @@ class ReviewController extends Controller
 
         return view('user');
     }
+
+    public function destroy($id)
+    {
+        // $login_user_id = Auth::id();
+        // dd($login_user_id);
+        // $review = Review::find($login_user_id);
+        // dd($review);
+
+        $review = Review::find($id);
+        // dd($reviews);
+        $review->delete();
+
+        return redirect()->view('stores.store');
+    }
 }

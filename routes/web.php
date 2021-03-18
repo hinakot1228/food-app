@@ -42,7 +42,7 @@ Route::get('/stores', function () {
 });
 
 Route::get('/store', function () {
-    return view('store');
+    return view('stores.store');
 });
 
 // Route::get('/reviewcreate', function () {
@@ -54,3 +54,6 @@ Route::get('/store', function () {
 Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create');
 // 保存処理
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
+
+// レビュー削除機能
+Route::delete('/reviews/{review}', 'ReviewController@destroy')->name('reviews.destroy');
