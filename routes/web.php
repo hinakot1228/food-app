@@ -56,4 +56,4 @@ Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create')
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
 
 // レビュー削除機能
-Route::delete('/reviews/{review}', 'ReviewController@destroy')->name('reviews.destroy');
+Route::delete('/store', 'ReviewController@destroy')->name('reviews.destroy');
