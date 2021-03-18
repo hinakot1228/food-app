@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Review;
+use App\User;
 
 class ReviewController extends Controller
 {
-    //
     public function index()
     {
-        
+        $user = Review::find(5)->user->name;
+        // dd();
+
+        $reviews = Review::all();
+        return view('stores/store', ['reviews'=>$reviews]);
     }
 
     public function create()
@@ -20,9 +24,6 @@ class ReviewController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request);
-        // die;
-
         $review = new Review;
 
         $review->date = $request->date;

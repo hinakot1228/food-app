@@ -41,16 +41,18 @@ Route::get('/stores', function () {
     return view('stores');
 });
 
-Route::get('/store', function () {
-    return view('store');
-});
+// Route::get('/store', function () {
+//     return view('store');
+// });
 
 // Route::get('/reviewcreate', function () {
 //     return view('reviewCreate');
 // });
 
-// レビュー作成画面のcreate機能
+// レビュー作成画面の投稿機能
 // create.blade.phpの見た目を表示するためのルーティング
 Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create');
 // 保存処理
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
+// レビューの一覧機能
+Route::get('/store', 'ReviewController@index')->name('reviews.index');
