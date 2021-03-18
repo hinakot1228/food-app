@@ -59,6 +59,11 @@ Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create')
 // 保存処理
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
 
+// お店登録画面のcreate機能
+// storeCreate.blade.phpの見た目を表示するためのルーティング
+Route::get('/stores/create', 'StoreController@create')->name('stores.create');
+// 保存処理
+Route::post('/stores', 'StoreController@store')->name('stores.store');
+
 // キーワード該当した料理一覧画面
 Route::get('/search', 'SearchController@index')->name('searches.index');
-
