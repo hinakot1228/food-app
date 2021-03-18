@@ -45,6 +45,10 @@ Route::get('/store', function () {
     return view('store');
 });
 
+Route::get('/foodsindex', function () {
+    return view('foodsIndex');
+});
+
 // Route::get('/reviewcreate', function () {
 //     return view('reviewCreate');
 // });
@@ -54,3 +58,7 @@ Route::get('/store', function () {
 Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create');
 // 保存処理
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
+
+// キーワード該当した料理一覧画面
+Route::get('/search', 'SearchController@index')->name('searches.index');
+
