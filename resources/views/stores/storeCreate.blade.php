@@ -21,7 +21,7 @@
                     <div class="main-heading">
                         <h2>お店の登録</h2>
                     </div>
-                    <form method="POST" action="{{--{{ route('register') }} --}}">
+                    <form method="POST" action="{{ route('stores.store') }}">
                         @csrf
                         <div class="signup-form">
                             <div class="signup-right">
@@ -75,15 +75,15 @@
                                     <div class="signup-info">
                                         {{-- <input id="price" type="select" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number') }}" required autocomplete="number"> --}}
 
-                                        <select name="genre" >
-                                            <option value="選択肢1">500円未満</option>
-                                            <option value="選択肢2">500円以上1,000円未満</option>
-                                            <option value="選択肢3">1,000円以上2,000円未満</option>
-                                            <option value="選択肢4">2,000円以上3,000円未満</option>
-                                            <option value="選択肢5">3,000円以上5,000円未満</option>
-                                            <option value="選択肢6">5,000円以上8,000円未満</option>
-                                            <option value="選択肢7">8,000円以上10,000円未満</option>
-                                            <option value="選択肢8">10,000円以上</option>
+                                        <select name="price" >
+                                            <option value="-500">500円未満</option>
+                                            <option value="500-1000">500円以上1,000円未満</option>
+                                            <option value="1000-2000">1,000円以上2,000円未満</option>
+                                            <option value="2000-3000">2,000円以上3,000円未満</option>
+                                            <option value="3000-5000">3,000円以上5,000円未満</option>
+                                            <option value="5000-8000">5,000円以上8,000円未満</option>
+                                            <option value="8000-10000">8,000円以上10,000円未満</option>
+                                            <option value="10000-">10,000円以上</option>
                                         </select>
         
                                         @error('number')
@@ -100,14 +100,14 @@
                                         {{-- <input id="genre" type="select" class="form-control @error('genre') is-invalid @enderror" name="genre" required autocomplete="new-password"> --}}
 
                                         <select name="genre" >
-                                            <option value="選択肢1">洋食</option>
-                                            <option value="選択肢2">和食</option>
-                                            <option value="選択肢3">中華</option>
-                                            <option value="選択肢4">イタリアン</option>
-                                            <option value="選択肢5">韓国</option>
-                                            <option value="選択肢6">タイ</option>
-                                            <option value="選択肢7">フランス</option>
-                                            <option value="選択肢8">トルコ</option>
+                                            <option value="洋食">洋食</option>
+                                            <option value="和食">和食</option>
+                                            <option value="中華">中華</option>
+                                            <option value="イタリアン">イタリアン</option>
+                                            <option value="韓国">韓国</option>
+                                            <option value="タイ">タイ</option>
+                                            <option value="フランス">フランス</option>
+                                            <option value="トルコ">トルコ</option>
                                         </select>
         
                                         @error('genre')
@@ -123,10 +123,10 @@
                                     <div class="profile-info">
                                         {{-- <input id="main-dish" type="select" class="form-control" name="main-dish" required autocomplete="new-password"> --}}
 
-                                        <select name="main-dish" >
-                                            <option value="選択肢1">肉</option>
-                                            <option value="選択肢2">魚</option>
-                                            <option value="選択肢3">野菜</option>
+                                        <select name="main_dish" >
+                                            <option value="肉">肉</option>
+                                            <option value="魚">魚</option>
+                                            <option value="野菜">野菜</option>
                                         </select>
 
                                     </div>
@@ -147,9 +147,7 @@
                             </div>
                         </div>
                         <div class="signup-btn">
-                            <a type="submit" class="btn signup-submit-btn">
-                                登録
-                            </a>
+                            <button type="submit" class="btn signup-submit-btn" value="登録"></button>
                         </div>
                     </form>
                 </div>
