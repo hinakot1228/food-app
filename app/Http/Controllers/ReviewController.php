@@ -4,25 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Review;
+use App\User;
 
 class ReviewController extends Controller
 {
-    //
     public function index()
     {
-        
+        $user = Review::find(1)->user->name;
+        // dd($user);
+
+        $reviews = Review::all();
+        return view('stores.store', ['reviews'=>$reviews]);
     }
 
     public function create()
     {
-        return view('reviews/reviewCreate');
+        return view('reviews.reviewCreate');
     } 
 
     public function store(Request $request)
     {
-        // dd($request);
-        // die;
-
         $review = new Review;
 
         $review->date = $request->date;
@@ -34,20 +35,6 @@ class ReviewController extends Controller
 
         $review->save();
 
-        return view('user');
-    }
-
-    public function destroy($id)
-    {
-        // $login_user_id = Auth::id();
-        // dd($login_user_id);
-        // $review = Review::find($login_user_id);
-        // dd($review);
-
-        $review = Review::find($id);
-        // dd($reviews);
-        $review->delete();
-
-        return redirect()->view('stores.store');
+        return view('users.user');
     }
 }
