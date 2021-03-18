@@ -10,7 +10,7 @@ class ReviewController extends Controller
 {
     public function index()
     {
-        $user = Review::find(1)->user->name;
+        // $user = Review::find(1)->user->name;
         // dd($user);
 
         $reviews = Review::all();
@@ -36,5 +36,13 @@ class ReviewController extends Controller
         $review->save();
 
         return view('users.user');
+    }
+
+    public function destroy($id)
+    {
+        $review = Review::find($id);
+        $review->delete();
+
+        return redirect()->route('reviews.index');
     }
 }

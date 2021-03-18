@@ -65,13 +65,11 @@
                                     <p>コメントコメントコメント</p>
                                 </div>
                             </div>
-                            <div class="detail-btns">
-                                <form action='{{ route('reviews.destroy') }}' method='post'>
-                                    @csrf
-                                    @method('delete')
-                                      <input type='submit' value='レビュー削除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？");'>
-                                </form>
-                            </div>
+                            <form action='{{ route('reviews.destroy', $review->id) }}' method='post'>
+                                @csrf
+                                @method('delete')
+                                <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？");'>
+                            </form>
                         </div>
                       </div>
                     </div>
