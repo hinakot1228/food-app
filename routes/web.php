@@ -13,28 +13,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/index', function () {
+    return view('index');
+});
 Route::get('/storesindex', function () {
-    return view('storesIndex');
+    return view('stores.storesIndex');
 });
 Route::get('/signup', function () {
-    return view('signup');
+    return view('users.signup');
 });
 Route::get('/signin', function () {
-    return view('signin');
+    return view('users.signin');
 });
 Route::get('/user', function () {
-    return view('user');
+    return view('users.user');
 });
 Route::get('/useredit', function () {
-    return view('userEdit');
+    return view('users.userEdit');
 });
 
 Route::get('/reviewcreate', function () {
-    return view('reviewCreate');
+    return view('reviews.reviewCreate');
 });
 
 Route::get('/storecreate', function () {
-    return view('storeCreate');
+    return view('stores.storeCreate');
 });
 
 Route::get('/stores', function () {
@@ -42,7 +45,7 @@ Route::get('/stores', function () {
 });
 
 Route::get('/store', function () {
-    return view('store');
+    return view('stores.store');
 });
 
 // Route::get('/reviewcreate', function () {

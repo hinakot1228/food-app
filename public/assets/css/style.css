@@ -277,4 +277,17 @@ footer {
 #page-top:hover {
     text-decoration: none;
 } 
-
+/*---------------------------------
+  レビュー作成
+---------------------------------*/
+.evaluation label{
+    position: relative;
+    padding: 10px 10px 0;
+    color:white;
+    text-shadow:0 0 2px #FF8E3C,0 0 2px #FF8E3C,0 0 2px #FF8E3C,0 0 2px #FF8E3C,0 0 2px #FF8E3C;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  .reviewcomment{
+    margin-left: 20%;
+}
