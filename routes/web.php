@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/storesindex', function () {
     return view('storesIndex');
 });
+Route::get('/', function () {
+    return view('index');
+});
 Route::get('/signup', function () {
     return view('signup');
 });
@@ -65,5 +68,9 @@ Route::get('/stores/create', 'StoreController@create')->name('stores.create');
 // 保存処理
 Route::post('/stores', 'StoreController@store')->name('stores.store');
 
+
 // キーワード該当した料理一覧画面
-Route::get('/search', 'SearchController@index')->name('searches.index');
+Route::get('/foods', 'FoodController@index')->name('foods.index');
+
+// 検索機能
+Route::post('/foods', 'FoodController@search');

@@ -55,11 +55,11 @@ header{
     justify-content: center;
 
 }
-.stores {
+.stores, .foods {
     display: flex;
     flex-direction: column;
 }
-.store {
+.store, .food {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -70,13 +70,13 @@ header{
     background: #EFF0F3;
     border-left: solid 10px #FF8E3C;
 }
-.store-menu {
+.store-menu, .food-menu {
     display: flex;
 }
 .store-img {
     margin-right: 30px;
 }
-.store-name {
+.store-name, .food-name {
     display: flex;
     align-items: center;
 }
