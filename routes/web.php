@@ -67,3 +67,7 @@ Route::post('/stores', 'StoreController@store')->name('stores.store');
 
 // キーワード該当した料理一覧画面
 Route::get('/search', 'SearchController@index')->name('searches.index');
+
+//お店画面のRead機能
+Route::get('/stores', 'StoreController@index')->name('stores.index');
+
