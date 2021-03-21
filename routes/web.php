@@ -40,9 +40,9 @@ Route::get('/storecreate', function () {
     return view('storeCreate');
 });
 
-Route::get('/stores', function () {
-    return view('stores');
-});
+// Route::get('/stores', function () {
+//     return view('stores.stores');
+// });
 
 Route::get('/store', function () {
     return view('store');
@@ -74,3 +74,6 @@ Route::get('/foods', 'FoodController@index')->name('foods.index');
 
 // 検索機能
 Route::post('/foods', 'FoodController@search');
+
+// キーワード該当した料理一覧画面
+Route::get('/stores', 'StoreController@searchIndex')->name('stores.searchIndex');

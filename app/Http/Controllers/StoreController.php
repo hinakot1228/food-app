@@ -40,7 +40,11 @@ class StoreController extends Controller
 
   }
 
-
-
+  public function searchIndex()
+  {
+    $stores = Store::all();
+      // dd($stores);
+    return view('stores.stores', ['stores' => $stores]);
+  }
 
 }

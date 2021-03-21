@@ -22,7 +22,7 @@
                         <h2>キーワードに該当する料理を紹介します。</h2>
                     </div>
                     <div class="foods">
-                        {{-- @foreach ($foods as $food) --}}
+                        @foreach ($foods as $food)
                         <div class="food">
                             <div class="food-menu">
                                 {{-- <img src="http://placehold.jp/70x70.png" alt="" class="store-img"> --}}
@@ -31,10 +31,10 @@
                                 </div>
                             </div>
                             <div class="store-btns">
-                                <a class="btn" href="">この料理が食べられるお店を見る</a>
+                                <a class="btn" href="{{ route('stores.searchIndex') }}">この料理が食べられるお店を見る</a>
                             </div>
                         </div>
-                        {{-- @endforeach --}}
+                        @endforeach
                     </div>
                 </div>
             </div>
