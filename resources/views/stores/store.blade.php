@@ -19,7 +19,7 @@
             <div class="wrapper">
                 <div class="container">
                     <div class="main-heading">
-                        <h2>(店名)の詳細情報</h2>
+                        <h2>{{ $store->name }}の詳細情報</h2>
                     </div>
 
                     <div class="stores">
@@ -27,13 +27,13 @@
                           <div class="store-menu">
                               <img src="http://placehold.jp/70x70.png" alt="" class="store-img">
                               <div class="store-name">
-                                  <h3>店名</h3>
+                                  <h3>{{ $store->name }}</h3>
                               </div>
                           </div>
                           <div class="store-btns">
                               <a class="btn" href="">目玉商品</a>
                               <a class="btn" href="">予算</a>
-                              <a class="btn" href="">リンク</a>
+                              <a class="btn" href="{{ $store->link }}">リンク</a>
                               {{-- <a class="btn" href="">レビューを書く</a> --}}
                           </div>
                       </div>

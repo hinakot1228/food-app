@@ -32,9 +32,9 @@
                                 </div>
                             </div>
                             <div class="store-btns">
-                                {{-- <a class="btn" href= " {{url('stores.create')}} ">詳細</a> --}}
-                                {{-- <a class="btn" href="">お気に入り解除</a>
-                                <a class="btn" href=" {{url('reviews.create')}} ">レビューを書く</a> --}}
+                                <a class="btn" href= " {{ route('stores.show', $store->id)}} ">詳細</a>
+                                <a class="btn" href="">お気に入り解除</a>
+                                <a class="btn" href=" {{url('reviews.create')}} ">レビューを書く</a>
                             </div>
                         </div>
                     </div>

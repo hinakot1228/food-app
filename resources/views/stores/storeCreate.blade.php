@@ -77,7 +77,7 @@
 
                                         <select name="price" >
                                             <option value="-500">500円未満</option>
-                                            <option value="500-1000">500円以上1,000円未満</option>
+                                            <option value="500-1000">500円以上1,000円未満</option>
                                             <option value="1000-2000">1,000円以上2,000円未満</option>
                                             <option value="2000-3000">2,000円以上3,000円未満</option>
                                             <option value="3000-5000">3,000円以上5,000円未満</option>

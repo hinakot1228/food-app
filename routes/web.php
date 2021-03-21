@@ -71,3 +71,7 @@ Route::get('/search', 'SearchController@index')->name('searches.index');
 //お店画面のRead機能
 Route::get('/stores', 'StoreController@index')->name('stores.index');
 
+// 店舗の詳細画面
+// {}の中にはstore_idが入る
+Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
+
