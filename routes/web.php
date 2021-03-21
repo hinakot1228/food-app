@@ -61,3 +61,6 @@ Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
 Route::get('/stores/create', 'StoreController@create')->name('stores.create');
 // 保存処理
 Route::post('/stores', 'StoreController@store')->name('stores.store');
+
+//お店画面のRead機能
+Route::get('/stores', 'StoreController@index')->name('stores.index');
