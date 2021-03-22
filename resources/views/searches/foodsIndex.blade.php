@@ -8,7 +8,6 @@
     <link href="{{asset('/assets/css/style.css')}}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 <body>
-    {{-- {{ $stores }} --}}
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
@@ -20,25 +19,21 @@
             <div class="wrapper">
                 <div class="container">
                     <div class="main-heading">
-                        <h2>お気に入りに登録したお店</h2>
+                        <h2>キーワードに該当する料理を紹介します。</h2>
                     </div>
-                    @foreach ($stores as $store)
                     <div class="stores">
                         <div class="store">
                             <div class="store-menu">
-                                <img src="http://placehold.jp/70x70.png" alt="" class="store-img">
+                                {{-- <img src="http://placehold.jp/70x70.png" alt="" class="store-img"> --}}
                                 <div class="store-name">
-                                    <h3>{{ $store->name }}</h3>
+                                    <h3>料理名</h3>
                                 </div>
                             </div>
                             <div class="store-btns">
-                                {{-- <a class="btn" href= " {{url('stores.create')}} ">詳細</a> --}}
-                                {{-- <a class="btn" href="">お気に入り解除</a>
-                                <a class="btn" href=" {{url('reviews.create')}} ">レビューを書く</a> --}}
+                                <a class="btn" href="">この料理が食べられるお店を見る</a>
                             </div>
                         </div>
                     </div>
-                    @endforeach
                 </div>
             </div>
         </main>

@@ -18,7 +18,7 @@ class CreateStoresTable extends Migration
             $table->string('name');
             $table->string('featured_food');
             $table->string('link');
-            $table->integer('price');
+            $table->string('price');
             $table->string('genre');
             $table->string('main_dish');
             $table->timestamps();
