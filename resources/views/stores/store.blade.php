@@ -30,9 +30,10 @@
                                   <h3>{{ $store->name }}</h3>
                               </div>
                           </div>
+
+                        <p>{{ $store->featured_food }}</p>
+                        <p>{{ $store->price }}</p>  
                           <div class="store-btns">
-                              <a class="btn" href="">目玉商品</a>
-                              <a class="btn" href="">予算</a>
                               <a class="btn" href="{{ $store->link }}">リンク</a>
                               {{-- <a class="btn" href="">レビューを書く</a> --}}
                           </div>
