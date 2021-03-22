@@ -49,7 +49,7 @@
 
                     <div class="details-container">
                       <div class="detail">
-                        @foreach ($reviews as $review)
+                        @foreach ( $reviews as $review )
                         <div class="detail-box">
                             <div class="detail-top">
                                 <div class="detail-img">

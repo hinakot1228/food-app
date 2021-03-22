@@ -14,6 +14,7 @@ class ReviewController extends Controller
         // dd($user);
 
         $reviews = Review::all();
+        dd($reviews);
         return view('stores/store', ['reviews'=>$reviews]);
     }
 
