@@ -76,9 +76,9 @@
                                         {{-- <input id="price" type="select" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number') }}" required autocomplete="number"> --}}
 
                                         <select name="price" >
-                                            <option value="-500">500円未満</option>
-                                            <option value="500-1000">500円以上1,000円未満</option>
-                                            <option value="1000-2000">1,000円以上2,000円未満</option>
+                                            <option value="500円未満">500円未満</option>
+                                            <option value="500円以上1,000円未満">500円以上1,000円未満</option>
+                                            <option value="1,000円以上-2000">1,000円以上2,000円未満</option>
                                             <option value="2000-3000">2,000円以上3,000円未満</option>
                                             <option value="3000-5000">3,000円以上5,000円未満</option>
                                             <option value="5000-8000">5,000円以上8,000円未満</option>

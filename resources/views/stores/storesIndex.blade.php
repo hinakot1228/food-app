@@ -22,19 +22,19 @@
                     <div class="main-heading">
                         <h2>お気に入りに登録したお店</h2>
                     </div>
-                    @foreach ($stores as $store)
+                    @foreach ($favorites as $favorite)
                     <div class="stores">
                         <div class="store">
                             <div class="store-menu">
                                 <img src="http://placehold.jp/70x70.png" alt="" class="store-img">
                                 <div class="store-name">
-                                    <h3>{{ $store->name }}</h3>
+                                    <h3>{{ $favorite->name }}</h3>
                                 </div>
                             </div>
                             <div class="store-btns">
-                                {{-- <a class="btn" href= " {{url('stores.create')}} ">詳細</a> --}}
-                                {{-- <a class="btn" href="">お気に入り解除</a>
-                                <a class="btn" href=" {{url('reviews.create')}} ">レビューを書く</a> --}}
+                                <a class="btn" href= " {{ route('stores.show', $favorite->store_id)}} ">詳細</a>
+                                <a class="btn" href="">お気に入り解除</a>
+                                <a class="btn" href=" {{url('reviews.create')}} ">レビューを書く</a>
                             </div>
                         </div>
                     </div>
