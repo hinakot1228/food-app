@@ -9,7 +9,9 @@ class StoreController extends Controller
 {
   public function index()
   {
-      
+      $stores = Store::all();
+      // dd($stores);
+      return view('stores.storesIndex', ['stores' => $stores]);
   }
 
   public function create()
