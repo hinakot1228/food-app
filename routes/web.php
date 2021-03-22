@@ -70,3 +70,7 @@ Route::get('/search', 'SearchController@index')->name('searches.index');
 
 // レビューの一覧機能
 Route::get('/store', 'ReviewController@index')->name('reviews.index');
+
+//お店画面のRead機能
+Route::get('/stores', 'StoreController@index')->name('stores.index');
+
