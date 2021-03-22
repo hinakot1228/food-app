@@ -58,7 +58,6 @@
             <input class="search" type="submit" value="検索">
         </form>
     </div>
-    
   </header>
   <main>
     <div class="howto"><a name="HowTo"></a>

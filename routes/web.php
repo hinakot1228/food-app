@@ -16,9 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/storesindex', function () {
     return view('storesIndex');
 });
+
 Route::get('/', function () {
     return view('index');
-});
+
+// Route::get('/index', function () {
+//    return view('Index');
+// });
+  
 Route::get('/signup', function () {
     return view('signup');
 });

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCollaborationsTable extends Migration
+class CreateFoodStoreTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCollaborationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('collaborations', function (Blueprint $table) {
+        Schema::create('food_store', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('food_id');
             
@@ -24,12 +24,12 @@ class CreateCollaborationsTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse `the migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('collaborations');
+        Schema::dropIfExists('food_store');
     }
 }
