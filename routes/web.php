@@ -87,3 +87,7 @@ Route::get('/stores', 'StoreController@index')->name('stores.index');
 // {}の中にはstore_idが入る
 Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
