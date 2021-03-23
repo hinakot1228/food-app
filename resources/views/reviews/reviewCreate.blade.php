@@ -26,7 +26,6 @@
                         <div class="signup-form">
                             <div class="signup-left">
                                 <div class="signup-img-group">
-                                    {{-- <label for="image_at" class="form-label">プロフィール写真</label> --}}
                                     <div class="signup-image">
                                         {{-- <input id="image_at" type="file" class="form-control  @error('image_at') is-invalid @enderror" name="image_at" value="{{ old('image_at') }}" required autocomplete="image_at" autofocus> --}}
         

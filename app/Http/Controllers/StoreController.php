@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Store;
+use App\Favorite;
 
 class StoreController extends Controller
 {
   public function index()
   {
-      
+      $favorites = Favorite::all();
+      // dd($stores);
+      return view('stores.storesIndex', ['favorites' => $favorites]);
   }
 
   public function create()
@@ -40,7 +43,12 @@ class StoreController extends Controller
 
   }
 
-
+  public function show($id)
+  {
+    $store = Store::find($id);
+    $reviews = $store->reviews;
+    return view('stores.store', ['store'=>$store, 'reviews'=>$reviews]);
+  }
 
 
 }
