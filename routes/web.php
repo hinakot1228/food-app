@@ -19,6 +19,7 @@ Route::get('/storesindex', function () {
 
 Route::get('/', function () {
     return view('index');
+});
 
 // Route::get('/index', function () {
 //    return view('Index');
