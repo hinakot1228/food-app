@@ -21,18 +21,27 @@
                     <div class="main-heading">
                         <h2>キーワードに該当する料理を紹介します。</h2>
                     </div>
-                    <div class="stores">
-                        <div class="store">
-                            <div class="store-menu">
+                    <div class="foods">
+                        @foreach ($foods as $food)
+                        <div class="food">
+                            <div class="food-menu">
                                 {{-- <img src="http://placehold.jp/70x70.png" alt="" class="store-img"> --}}
-                                <div class="store-name">
-                                    <h3>料理名</h3>
+                                <div class="food-name">
+                                    <h3>{{ $food->name }}</h3>
                                 </div>
+                                
                             </div>
                             <div class="store-btns">
-                                <a class="btn" href="">この料理が食べられるお店を見る</a>
+                                <form action="{{ route('stores.searchIndex', $food->id) }}" method="get">
+                                    @csrf
+                                    {{-- <input type="hidden" name="genre" value="{{ $food->genre }}">
+                                    <input type="hidden" name="maindish" value="{{ $food->main_dish }}"> --}}
+
+                                    <button class="btn">この料理が食べられるお店を見る</button>
+                                </form>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
