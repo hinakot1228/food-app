@@ -43,12 +43,24 @@ class StoreController extends Controller
 
   }
 
+    public function show($id)
+  {
+    $store = Store::find($id);
+    $reviews = $store->reviews;
+    return view('stores.store', ['store'=>$store, 'reviews'=>$reviews]);
+  }
+  
+  public function searchIndex()
+  {
+    $stores = Store::all();
+      // dd($stores);
+    return view('stores.stores', ['stores' => $stores]);
+  }
+
   public function show($id)
   {
     $store = Store::find($id);
     $reviews = $store->reviews;
     return view('stores.store', ['store'=>$store, 'reviews'=>$reviews]);
   }
-
-
 }
