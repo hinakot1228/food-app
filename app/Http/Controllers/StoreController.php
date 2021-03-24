@@ -80,6 +80,7 @@ class StoreController extends Controller
     return view('stores.store', ['store'=>$store, 'reviews'=>$reviews]);
   }
 
+  
 
    
 
