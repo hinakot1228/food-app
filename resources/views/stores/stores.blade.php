@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                             <div class="store-btns">
-                                <a class="btn" href="">詳細</a>
+                                <a class="btn" href="{{ route('stores.show', $store->id)}}">詳細</a>
                                 <a class="btn" href="">お気に入り</a>
                                 {{-- <a class="btn" href="">レビューを書く</a> --}}
                             </div>

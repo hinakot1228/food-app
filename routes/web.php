@@ -91,7 +91,7 @@ Route::get('/store', 'ReviewController@index')->name('reviews.index');
 Route::get('/stores', 'StoreController@index')->name('stores.index');
 
 // 検索機能のあとのお店一覧
-Route::get('/stores/{id}', 'StoreController@searchIndex')->name('stores.searchIndex');
+Route::get('/stores/search/{id}', 'StoreController@searchIndex')->name('stores.searchIndex');
 
 // 店舗の詳細画面
 // {}の中にはstore_idが入る
