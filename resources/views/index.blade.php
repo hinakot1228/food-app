@@ -10,7 +10,7 @@
 <body>
   <header><a name="title"></a>
     <div class="first_view">
-      <div class="header-logo"><a href="">ペコログ</a></div>
+      <div class="header-logo"><a href="pekolog">ペコログ</a></div>
       <ul class="header-right" style="list-style: none">
         <li class="how-btn"><a href="#HowTo">使い方</a></li>
         <li class="function-btn"><a href="#Function">機能</a></li>
@@ -26,7 +26,7 @@
       <br>はらぺこなあなたにぴったりの一皿を。
     </h2>
     <div class="find">
-        <form method="post" action="/foods" }}>
+        <form  class="find-menu"method="post" action="/foods" }}>
             @csrf
             <select id="genre" class="genre" name="genre" @error('genre') is-invalid @enderror" required>
                 <option hidden>なんとなく食べたいジャンル</option>
@@ -111,8 +111,6 @@
     <div class="developer">©️ 2021 The Greatest Show MEN</div>
   </footer>
 </body>
-<<<<<<< HEAD
 </html>
-=======
 </html>
->>>>>>> search_function
+

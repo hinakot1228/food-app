@@ -11,7 +11,7 @@
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
-                <a href="index" class="header-logo">アプリ名</a>
+                <a href="{{ url('/') }}" class="header-logo">ペコログ</a>
             </div>
         </header>
 
@@ -31,8 +31,9 @@
                               </div>
                           </div>
 
-                        <p>{{ $store->featured_food }}</p>
-                        <p>{{ $store->price }}</p>  
+                            <div class="fetured_food">目玉商品：<span>{{ $store->featured_food }}</span></div>
+                            <div class="price">値段：<span>{{ $store->price }}</span></div>
+                                
                           <div class="store-btns">
 
                               <a class="btn" href="{{ $store->link }}">リンク</a>
