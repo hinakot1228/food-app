@@ -11,7 +11,7 @@
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
-                <a href="#" class="header-logo">アプリ名</a>
+                <a href="{{ url('/') }}" class="header-logo">ペコログ</a>
             </div>
         </header>
 
@@ -22,19 +22,21 @@
                         <h2>キーワードに該当するお店を紹介します。</h2>
                     </div>
                     <div class="stores">
+                        @foreach ($stores as $store)
                         <div class="store">
                             <div class="store-menu">
                                 <img src="http://placehold.jp/70x70.png" alt="" class="store-img">
                                 <div class="store-name">
-                                    <h3>店名</h3>
+                                    <h3>{{ $store->name }}</h3>
                                 </div>
                             </div>
                             <div class="store-btns">
-                                <a class="btn" href="">詳細</a>
+                                <a class="btn" href="{{ route('stores.show', $store->id)}}">詳細</a>
                                 <a class="btn" href="">お気に入り</a>
                                 {{-- <a class="btn" href="">レビューを書く</a> --}}
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@
 <body>
   <header><a name="title"></a>
     <div class="first_view">
-      <div class="header-logo"><a href="">ペコログ</a></div>
+      <div class="header-logo"><a href="pekolog">ペコログ</a></div>
       <ul class="header-right" style="list-style: none">
         <li class="how-btn"><a href="#HowTo">使い方</a></li>
         <li class="function-btn"><a href="#Function">機能</a></li>
@@ -26,23 +26,37 @@
       <br>はらぺこなあなたにぴったりの一皿を。
     </h2>
     <div class="find">
-      <select class="genre" name="genre">
-        <option hidden>なんとなく食べたいジャンル</option>
-        <option>洋食</option>
-        <option>和食</option>
-        <option>中華</option>
-        <option>イタリアン</option>
-        <option>韓国料理</option>
-        <option>タイ料理</option>
-        <option>フレンチ</option>
-        <option>トルコ料理</option>
-      </select><select class="maindish" name="maindish">
-        <option hidden>なんとなく食べたい主食</option>
-        <option>肉</option>
-        <option>魚</option>
-        <option>野菜</option>
-      </select>
-      <input class="search" type="submit" value="検索">
+        <form  class="find-menu"method="post" action="/foods" }}>
+            @csrf
+            <select id="genre" class="genre" name="genre" @error('genre') is-invalid @enderror" required>
+                <option hidden>なんとなく食べたいジャンル</option>
+                <option value="western">洋食</option>
+                <option value="japanese">和食</option>
+                <option value="chinese">中華</option>
+                <option value="italian">イタリアン</option>
+                <option value="korean">韓国料理</option>
+                <option value="thai">タイ料理</option>
+                <option value="french">フレンチ</option>
+                <option value="turkish">トルコ料理</option>
+            </select>
+            {{-- @error('genre')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror --}}
+            <select id="maindish" class="maindish" name="maindish"  @error('maindish') is-invalid @enderror" required>
+                <option hidden>なんとなく食べたい主食</option>
+                <option value="meat">肉</option>
+                <option value="fish">魚</option>
+                <option value="vegetable">野菜</option>
+            </select>
+            {{-- @error('maindish')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror --}}
+            <input class="search" type="submit" value="検索">
+        </form>
     </div>
   </header>
   <main>
@@ -99,6 +113,11 @@
 </body>
 <<<<<<< HEAD
 </html>
+<<<<<<< HEAD
 =======
 </html>
 >>>>>>> 12f1c50533e886512337c05741836030a1b1b3ec
+=======
+</html>
+
+>>>>>>> f2308229048aeac01d81312f9c244d34f4f146a8

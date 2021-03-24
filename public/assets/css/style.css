@@ -6,6 +6,7 @@ section {
     min-height: 100vh;
 }
 a {
+    color: white;
     text-decoration: none;
 }
 
@@ -55,11 +56,11 @@ header{
     justify-content: center;
 
 }
-.stores {
+.stores, .foods {
     display: flex;
     flex-direction: column;
 }
-.store {
+.store, .food {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -70,13 +71,13 @@ header{
     background: #EFF0F3;
     border-left: solid 10px #FF8E3C;
 }
-.store-menu {
+.store-menu, .food-menu {
     display: flex;
 }
 .store-img {
     margin-right: 30px;
 }
-.store-name {
+.store-name, .food-name {
     display: flex;
     align-items: center;
 }
@@ -86,6 +87,7 @@ header{
     padding: 3px 10px;
     border-radius:25px;
     font-size: 13px;
+    border: 1px solid orange;
 }
 .evaluation{
     display: flex;
@@ -212,7 +214,7 @@ header{
     padding-top: 20px;
 }
 .signup-submit-btn {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 /*-------------------
@@ -335,4 +337,20 @@ footer {
 .star5_rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
 .star5_rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
 .star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+<<<<<<< HEAD
 .star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+=======
+.star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+
+/*---------------------------------
+  index.blade.php
+---------------------------------*/
+
+.price{
+    font-size: x-large;
+}
+
+.fetured_food{
+    font-size: x-large;
+}
+>>>>>>> f2308229048aeac01d81312f9c244d34f4f146a8

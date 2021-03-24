@@ -19,8 +19,14 @@ Route::get('/index', function () {
 Route::get('/storesindex', function () {
     return view('stores.storesIndex');
 });
+
 Route::get('/index', function () {
     return view('Index');
+});
+
+Route::get('/', function () {
+    return view('index');
+
 });
 Route::get('/signup', function () {
     return view('users.signup');
@@ -43,9 +49,9 @@ Route::get('/storecreate', function () {
     return view('stores.storeCreate');
 });
 
-Route::get('/stores', function () {
-    return view('stores');
-});
+// Route::get('/stores', function () {
+//     return view('stores.stores');
+// });
 
 Route::get('/store', function () {
     return view('stores.store');
@@ -74,6 +80,13 @@ Route::get('/stores/create', 'StoreController@create')->name('stores.create');
 // 保存処理
 Route::post('/stores', 'StoreController@store')->name('stores.store');
 
+
+// キーワード該当した料理一覧画面
+Route::get('/foods', 'FoodController@index')->name('foods.index');
+
+// 検索機能
+Route::post('/foods', 'FoodController@search');
+
 // キーワード該当した料理一覧画面
 Route::get('/search', 'SearchController@index')->name('searches.index');
 
@@ -83,7 +96,11 @@ Route::get('/store', 'ReviewController@index')->name('reviews.index');
 //お店画面のRead機能
 Route::get('/stores', 'StoreController@index')->name('stores.index');
 
+// 検索機能のあとのお店一覧
+Route::get('/stores/search/{id}', 'StoreController@searchIndex')->name('stores.searchIndex');
+
 // 店舗の詳細画面
 // {}の中にはstore_idが入る
 Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
+
 

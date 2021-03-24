@@ -11,7 +11,7 @@
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
-                <a href="index" class="header-logo">アプリ名</a>
+                <a href="{{ url('/') }}" class="header-logo">ペコログ</a>
             </div>
             <div class="header-wrapper2">
                 <a href="storecreate" class="store-regist">お店を登録</a>

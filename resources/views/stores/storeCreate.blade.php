@@ -11,7 +11,7 @@
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
-                <a href="#" class="header-logo">アプリ名</a>
+                <a href="{{ url('/') }}" class="header-logo">ペコログ</a>
             </div>
         </header>
 
@@ -78,12 +78,12 @@
                                         <select name="price" >
                                             <option value="500円未満">500円未満</option>
                                             <option value="500円以上1,000円未満">500円以上1,000円未満</option>
-                                            <option value="1,000円以上-2000">1,000円以上2,000円未満</option>
-                                            <option value="2000-3000">2,000円以上3,000円未満</option>
-                                            <option value="3000-5000">3,000円以上5,000円未満</option>
-                                            <option value="5000-8000">5,000円以上8,000円未満</option>
-                                            <option value="8000-10000">8,000円以上10,000円未満</option>
-                                            <option value="10000-">10,000円以上</option>
+                                            <option value="1,000円以上2,000円未満">1,000円以上2,000円未満</option>
+                                            <option value="2,000円以上3,000円未満">2,000円以上3,000円未満</option>
+                                            <option value="3,000円以上5,000円未満">3,000円以上5,000円未満</option>
+                                            <option value="5,000円以上8,000円未満">5,000円以上8,000円未満</option>
+                                            <option value="8,000円以上10,000円未満">8,000円以上10,000円未満</option>
+                                            <option value="10,000円以上">10,000円以上</option>
                                         </select>
         
                                         @error('number')
@@ -147,7 +147,7 @@
                             </div>
                         </div>
                         <div class="signup-btn">
-                            <button type="submit" class="btn signup-submit-btn" value="登録"></button>
+                            <button type="submit" class="btn signup-submit-btn" value="登録">登録</button>
                         </div>
                     </form>
                 </div>

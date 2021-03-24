@@ -11,7 +11,7 @@
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
-                <a href="index" class="header-logo">アプリ名</a>
+                <a href="{{ url('/') }}" class="header-logo">ペコログ</a>
             </div>
         </header>
 
@@ -145,7 +145,11 @@
                             </div>
                         </div>
                         <div class="signup-btn">
+<<<<<<< HEAD
                             <input type="submit" class="btn signup-submit-btn" value="登録">
+=======
+                            <button type="submit" class="btn signup-submit-btn" value="登録">登録</button>
+>>>>>>> f2308229048aeac01d81312f9c244d34f4f146a8
                         </div>
                     </form>
                 </div>
