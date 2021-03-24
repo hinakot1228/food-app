@@ -12,7 +12,7 @@
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
-                <a href="#" class="header-logo">アプリ名</a>
+                <a href="{{ url('/') }}" class="header-logo">ペコログ</a>
             </div>
         </header>
 
@@ -34,7 +34,7 @@
                             <div class="store-btns">
                                 <a class="btn" href= " {{ route('stores.show', $favorite->store_id)}} ">詳細</a>
                                 <a class="btn" href="">お気に入り解除</a>
-                                <a class="btn" href=" {{url('reviews.create')}} ">レビューを書く</a>
+                                <a class="btn" href=" {{ route('reviews.create') }} ">レビューを書く</a>
                             </div>
                         </div>
                     </div>
