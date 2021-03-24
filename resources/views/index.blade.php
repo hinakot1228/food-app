@@ -10,13 +10,13 @@
 <body>
   <header><a name="title"></a>
     <div class="first_view">
-      <div class="header-logo"><a href="">ペコログ</a></div>
+      <div class="header-logo"><a href="{{ route('/') }}">ペコログ</a></div>
       <ul class="header-right" style="list-style: none">
         <li class="how-btn"><a href="#HowTo">使い方</a></li>
         <li class="function-btn"><a href="#Function">機能</a></li>
-        <li class="signup-btn"><a href="">サインアップ</a></li>
-        <li class="signin-btn"><a href="">サインイン</a></li>
-        <li class="mypage-btn"><a href="">マイページ</a></li>
+        <li class="signup-btn"><a href="{{ route('register') }}">サインアップ</a></li>
+        <li class="signin-btn"><a href="{{ route('login') }}">サインイン</a></li>
+        <li class="mypage-btn"><a href="{{ route('users.user') }}">マイページ</a></li>
       </ul class="header-menu">
     </div>
     <h1 class="introduction">“今日のごはん何でもいいや…”</h1>
@@ -71,7 +71,7 @@
     </div>
     <div class="function">
         <b class="heading-function">機能</b><a name="Function"></a>
-          <div class="small-heading-howto">会員登録特典</div>
+          {{-- <div class="small-heading-howto">会員登録特典</div> --}}
             <ul class="howto-step" style="list-style: none">
               <li>レビューを書く</li>
               <li>お気に入りに登録する</li>
@@ -97,8 +97,3 @@
     <div class="developer">©️ 2021 The Greatest Show MEN</div>
   </footer>
 </body>
-<<<<<<< HEAD
-</html>
-=======
-</html>
->>>>>>> 12f1c50533e886512337c05741836030a1b1b3ec
