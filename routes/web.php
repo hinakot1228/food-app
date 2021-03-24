@@ -93,3 +93,8 @@ Route::get('/stores', 'StoreController@index')->name('stores.index');
 // 検索機能のあとのお店一覧
 Route::get('/stores/{id}', 'StoreController@searchIndex')->name('stores.searchIndex');
 
+// 店舗の詳細画面
+// {}の中にはstore_idが入る
+Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
+
+

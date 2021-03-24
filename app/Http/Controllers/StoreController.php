@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Store;
 use App\Food;
+use App\Favorite;
+
 
 class StoreController extends Controller
 {
   public function index()
   {
-      $stores = Store::all();
+      $favorites = Favorite::all();
       // dd($stores);
-      return view('stores.storesIndex', ['stores' => $stores]);
+      return view('stores.storesIndex', ['favorites' => $favorites]);
   }
 
   public function create()
@@ -43,6 +45,7 @@ class StoreController extends Controller
 
   }
 
+
   public function searchIndex($id)
   {
     $food = Food::find($id);
@@ -62,13 +65,22 @@ class StoreController extends Controller
     // $maindish_keyword = $request->input('maindish');
     // dd($genre);
     // dd($main_dish);
-
-    // ジャンル・主菜のキーワードに該当する食べ物名を取得
+     // ジャンル・主菜のキーワードに該当する食べ物名を取得
     // $foods = Food::with('genre', $genre_keyword)->where('main_dish', $maindish_keyword)->get();
 
     // dd($food);
 
     return view('stores.stores', ['stores' => $stores]);
   }
+
+  public function show($id)
+  {
+    $store = Store::find($id);
+    $reviews = $store->reviews;
+    return view('stores.store', ['store'=>$store, 'reviews'=>$reviews]);
+  }
+
+
+   
 
 }
