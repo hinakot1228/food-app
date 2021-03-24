@@ -46,7 +46,12 @@ class StoreController extends Controller
   public function searchIndex($id)
   {
     $food = Food::find($id);
+    $genre= Food::find($id)->genre;
+    $maindish= Food::find($id)->main_dish;
     // dd($food);
+
+    $stores = Store::where('genre', $genre)->where('main_dish', $maindish)->get();
+    // dd($stores);
 
     // $stores = Store::all();
     // dd($stores);
@@ -63,8 +68,7 @@ class StoreController extends Controller
 
     // dd($food);
 
-
-    // return view('stores.stores', ['stores' => $stores]);
+    return view('stores.stores', ['stores' => $stores]);
   }
 
 }

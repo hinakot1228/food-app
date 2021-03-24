@@ -32,12 +32,12 @@
                                 
                             </div>
                             <div class="store-btns">
-                                <form action="{{ route('stores.searchIndex') }}" method="post">
+                                <form action="{{ route('stores.searchIndex', $food->id) }}" method="get">
                                     @csrf
-                                    <input type="hidden" name="genre" value="{{ $food->genre }}">
-                                    <input type="hidden" name="maindish" value="{{ $food->main_dish }}">
+                                    {{-- <input type="hidden" name="genre" value="{{ $food->genre }}">
+                                    <input type="hidden" name="maindish" value="{{ $food->main_dish }}"> --}}
 
-                                    <a class="btn" href="{{ route('stores.searchIndex', $food->id) }}">この料理が食べられるお店を見る</a>
+                                    <button class="btn">この料理が食べられるお店を見る</button>
                                 </form>
                             </div>
                         </div>
