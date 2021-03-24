@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,16 +10,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/index', function () {
-    return view('index');
-});
 Route::get('/storesindex', function () {
-    return view('stores.storesIndex');
+    return view('storesIndex');
 });
-
-Route::get('/index', function () {
-    return view('Index');
+Route::get('/', function () {
+    return view('index');
 });
 
 Route::get('/', function () {
@@ -29,51 +22,40 @@ Route::get('/', function () {
 
 });
 Route::get('/signup', function () {
-    return view('users.signup');
+    return view('signup');
 });
 Route::get('/signin', function () {
-    return view('users.signin');
+    return view('signin');
 });
 Route::get('/user', function () {
-    return view('users.user');
+    return view('user');
 });
 Route::get('/useredit', function () {
-    return view('users.userEdit');
+    return view('userEdit');
 });
-
 Route::get('/reviewcreate', function () {
-    return view('reviews.reviewCreate');
+    return view('reviewCreate');
 });
-
 Route::get('/storecreate', function () {
-    return view('stores.storeCreate');
+    return view('storeCreate');
 });
-
 // Route::get('/stores', function () {
 //     return view('stores.stores');
 // });
-
 Route::get('/store', function () {
-    return view('stores.store');
+    return view('store');
 });
-// Route::get('/store', function () {
-//     return view('store');
-// });
-
 Route::get('/foodsindex', function () {
     return view('foodsIndex');
 });
-
 // Route::get('/reviewcreate', function () {
 //     return view('reviewCreate');
 // });
-
-// レビュー作成画面の投稿機能
+// レビュー作成画面のcreate機能
 // create.blade.phpの見た目を表示するためのルーティング
 Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create');
 // 保存処理
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
-
 // お店登録画面のcreate機能
 // storeCreate.blade.phpの見た目を表示するためのルーティング
 Route::get('/stores/create', 'StoreController@create')->name('stores.create');
@@ -103,4 +85,4 @@ Route::get('/stores/search/{id}', 'StoreController@searchIndex')->name('stores.s
 // {}の中にはstore_idが入る
 Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
 
-
+Auth::routes();
