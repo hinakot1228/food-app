@@ -111,13 +111,11 @@
     <div class="developer">©️ 2021 The Greatest Show MEN</div>
   </footer>
 </body>
-<<<<<<< HEAD
-</html>
-<<<<<<< HEAD
-=======
-</html>
->>>>>>> 12f1c50533e886512337c05741836030a1b1b3ec
-=======
+
 </html>
 
->>>>>>> f2308229048aeac01d81312f9c244d34f4f146a8
+</html>
+
+</html>
+
+
