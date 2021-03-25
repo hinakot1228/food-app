@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/index', function () {
+    return view('index');
+});
 Route::get('/storesindex', function () {
-    return view('storesIndex');
+    return view('stores.storesIndex');
 });
 
 Route::get('/index', function () {
@@ -26,24 +29,24 @@ Route::get('/', function () {
 
 });
 Route::get('/signup', function () {
-    return view('signup');
+    return view('users.signup');
 });
 Route::get('/signin', function () {
-    return view('signin');
+    return view('users.signin');
 });
 Route::get('/user', function () {
-    return view('user');
+    return view('users.user');
 });
 Route::get('/useredit', function () {
-    return view('userEdit');
+    return view('users.userEdit');
 });
 
 Route::get('/reviewcreate', function () {
-    return view('reviewCreate');
+    return view('reviews.reviewCreate');
 });
 
 Route::get('/storecreate', function () {
-    return view('storeCreate');
+    return view('stores.storeCreate');
 });
 
 // Route::get('/stores', function () {
@@ -52,6 +55,7 @@ Route::get('/storecreate', function () {
 
 Route::get('/store', function () {
     return view('stores.store');
+});
 
 // Route::get('/store', function () {
 //     return view('store');
@@ -107,3 +111,5 @@ Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
 
 // お気に入りに登録する
 Route::get('/favorites/{id}', 'StoreController@favoriteStore')->name('stores.favoriteStore');
+
+

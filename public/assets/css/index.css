@@ -130,6 +130,7 @@ header:before{
   justify-content: space-around;
 }
 .imgs-howto1{
+  margin-left: 10%;
   width: 25vw;
 }
 .howto2{
@@ -178,9 +179,9 @@ header:before{
   line-height: 50px;
   display: inline-block;
 }
-footer{
+/* footer{
   background-color:#222222;
-}
+} */
 .developer{
   font-size: small;
   color: white;
@@ -188,3 +189,39 @@ footer{
   justify-content: center;
   padding: 2% 2%;
 }
+
+/*---------------------------------
+  footer
+---------------------------------*/
+
+footer {
+  background-color: #232323;
+}
+.footer-wrapper {
+  height: 40px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/*---------------------------------
+  page top
+---------------------------------*/
+/* .page-top {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+}
+
+#page-top {
+  display: block;
+  color: #FF8E3C;
+  font-size: 40px;
+  text-align: center;
+}
+
+#page-top:hover {
+  text-decoration: none;
+}  */

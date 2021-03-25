@@ -303,8 +303,8 @@ footer {
     font-size: 30px;
   }
   .reviewcomment{
-    margin-left: 100px;
-    }
+    margin-left: 20%;
+}
 
 /*---------------------------------
   星評価
@@ -337,6 +337,9 @@ footer {
 .star5_rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
 .star5_rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
 .star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+<<<<<<< HEAD
+.star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+=======
 .star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
 
 /*---------------------------------
@@ -350,3 +353,4 @@ footer {
 .fetured_food{
     font-size: x-large;
 }
+>>>>>>> f2308229048aeac01d81312f9c244d34f4f146a8

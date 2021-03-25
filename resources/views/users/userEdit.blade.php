@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div class="signup-btn">
-                            <a type="submit" class="btn signup-submit-btn">
+                            <a href="" type="submit" class="btn signup-submit-btn">
                                 完了
                             </a>
                         </div>

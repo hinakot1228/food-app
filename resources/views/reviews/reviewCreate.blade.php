@@ -131,7 +131,7 @@
                                 </div> --}}
                                 <div class="signup-info-group">
                                     <label for="words" class="form-label">コメント</label>
-                                    <textarea name="comment" rows="10" cols="40"></textarea><br>
+                                    <textarea class="reviewcomment" name="comment" rows="10" cols="40"></textarea><br>
                                     {{-- <div class="signup-info">
                                         <input id="words" type="textarea"  class="form-control @error('comment') is-invalid @enderror" name="words" required autocomplete="new-password">
         
@@ -145,7 +145,11 @@
                             </div>
                         </div>
                         <div class="signup-btn">
+
+                            {{-- <input type="submit" class="btn signup-submit-btn" value="登録"> --}}
+
                             <button type="submit" class="btn signup-submit-btn" value="登録">登録</button>
+
                         </div>
                     </form>
                 </div>
