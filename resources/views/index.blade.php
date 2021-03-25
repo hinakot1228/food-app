@@ -10,13 +10,13 @@
 <body>
   <header><a name="title"></a>
     <div class="first_view">
-      <div class="header-logo"><a href="{{ route('/') }}">ペコログ</a></div>
+      <div class="header-logo"><a href="">ペコログ</a></div>
       <ul class="header-right" style="list-style: none">
         <li class="how-btn"><a href="#HowTo">使い方</a></li>
         <li class="function-btn"><a href="#Function">機能</a></li>
         <li class="signup-btn"><a href="{{ route('register') }}">サインアップ</a></li>
         <li class="signin-btn"><a href="{{ route('login') }}">サインイン</a></li>
-        <li class="mypage-btn"><a href="{{ route('users.user') }}">マイページ</a></li>
+        <li class="mypage-btn"><a href="">マイページ</a></li>
       </ul class="header-menu">
     </div>
     <h1 class="introduction">“今日のごはん何でもいいや…”</h1>
@@ -55,7 +55,7 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror --}}
-            <input class="search" type="submit" value="検索">
+            <input  class="search" type="submit" value="検索">
         </form>
     </div>
   </header>

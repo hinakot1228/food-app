@@ -213,7 +213,7 @@
                             </div>
                         </div>
                         <div class="signup-btn">
-                            <a href="{{ route('/') }}" type="submit" class="btn signup-submit-btn">
+                            <a href="" type="submit" class="btn signup-submit-btn">
                                 登録
                             </a>
                         </div>

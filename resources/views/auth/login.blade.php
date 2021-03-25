@@ -140,7 +140,7 @@
 
                             <div class="signin-btn-group">
                                 <div class="signin-btn">
-                                    <a type="submit" href="{{ route('/') }}" class="btn signin-submit-btn">
+                                    <a type="submit" href="" class="btn signin-submit-btn">
                                         サインイン
                                     </a>
                                 {{-- </div>
