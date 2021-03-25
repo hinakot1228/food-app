@@ -80,11 +80,6 @@ class FoodsTableSeeder extends Seeder
               'main_dish' => 'meat',
             ],
             [
-              'name' => '餃子',
-              'genre' => 'chinese',
-              'main_dish' => 'meat',
-            ],
-            [
               'name' => '回鍋肉',
               'genre' => 'chinese',
               'main_dish' => 'meat',
@@ -270,7 +265,7 @@ class FoodsTableSeeder extends Seeder
               'main_dish' => 'meat',
             ],
             [
-              'name' => '`パテ',
+              'name' => 'パテ',
               'genre' => 'french',
               'main_dish' => 'meat',
             ],

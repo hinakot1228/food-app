@@ -100,14 +100,14 @@
                                         {{-- <input id="genre" type="select" class="form-control @error('genre') is-invalid @enderror" name="genre" required autocomplete="new-password"> --}}
 
                                         <select name="genre" >
-                                            <option value="洋食">洋食</option>
-                                            <option value="和食">和食</option>
-                                            <option value="中華">中華</option>
-                                            <option value="イタリアン">イタリアン</option>
-                                            <option value="韓国">韓国</option>
-                                            <option value="タイ">タイ</option>
-                                            <option value="フランス">フランス</option>
-                                            <option value="トルコ">トルコ</option>
+                                            <option value="western">洋食</option>
+                                            <option value="japanese">和食</option>
+                                            <option value="chinese">中華</option>
+                                            <option value="italian">イタリアン</option>
+                                            <option value="korean">韓国</option>
+                                            <option value="tahi">タイ</option>
+                                            <option value="french">フランス</option>
+                                            <option value="turkish">トルコ</option>
                                         </select>
         
                                         @error('genre')
@@ -124,9 +124,9 @@
                                         {{-- <input id="main-dish" type="select" class="form-control" name="main-dish" required autocomplete="new-password"> --}}
 
                                         <select name="main_dish" >
-                                            <option value="肉">肉</option>
-                                            <option value="魚">魚</option>
-                                            <option value="野菜">野菜</option>
+                                            <option value="meat">肉</option>
+                                            <option value="fish">魚</option>
+                                            <option value="vegetable">野菜</option>
                                         </select>
 
                                     </div>
