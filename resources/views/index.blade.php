@@ -10,7 +10,7 @@
 <body>
   <header><a name="title"></a>
     <div class="first_view">
-      <div class="header-logo"><a href="pekolog">ペコログ</a></div>
+      <div class="header-logo"><a href="">ペコログ</a></div>
       <ul class="header-right" style="list-style: none">
         <li class="how-btn"><a href="#HowTo">使い方</a></li>
         <li class="function-btn"><a href="#Function">機能</a></li>

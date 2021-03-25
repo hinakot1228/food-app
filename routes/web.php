@@ -56,7 +56,6 @@ Route::get('/storecreate', function () {
 Route::get('/store', function () {
     return view('stores.store');
 });
-=======
 
 // Route::get('/store', function () {
 //     return view('store');
