@@ -85,4 +85,4 @@ Route::get('/stores/search/{id}', 'StoreController@searchIndex')->name('stores.s
 // {}の中にはstore_idが入る
 Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
 
-Auth::routes();
+Auth::routes([‘register’ => false]);
