@@ -16,14 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/storesindex', function () {
     return view('storesIndex');
 });
-
 Route::get('/index', function () {
     return view('Index');
 });
-
 Route::get('/', function () {
     return view('index');
-
 });
 Route::get('/signup', function () {
     return view('signup');
@@ -45,14 +42,13 @@ Route::get('/reviewcreate', function () {
 Route::get('/storecreate', function () {
     return view('storeCreate');
 });
-
 // Route::get('/stores', function () {
 //     return view('stores.stores');
 // });
 
 Route::get('/store', function () {
     return view('stores.store');
-
+});
 // Route::get('/store', function () {
 //     return view('store');
 // });
@@ -107,3 +103,6 @@ Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
 
 // お気に入りに登録する
 Route::get('/favorites/{id}', 'StoreController@favoriteStore')->name('stores.favoriteStore');
+
+// お気に入りの削除機能
+Route::delete('/stores/delete/{store}', 'StoreController@destroy')->name('stores.destroy');
