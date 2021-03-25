@@ -111,8 +111,5 @@
     <div class="developer">©️ 2021 The Greatest Show MEN</div>
   </footer>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> search_function
+
