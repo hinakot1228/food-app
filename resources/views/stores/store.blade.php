@@ -71,6 +71,11 @@
                                     <p>コメント：<br>{{ $review->comment }}</p>
                                 </div>
                             </div>
+                            <form action='{{ route('reviews.destroy', $review->id) }}' method='post'>
+                                @csrf
+                                @method('delete')
+                                <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？");'>
+                            </form>
                         </div>
                         @endforeach
                       </div>

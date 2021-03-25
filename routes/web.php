@@ -50,12 +50,16 @@ Route::get('/storecreate', function () {
 //     return view('stores.stores');
 // });
 
+Route::get('/store', function () {
+    return view('stores.store');
+
 // Route::get('/store', function () {
 //     return view('store');
 // });
 
 Route::get('/foodsindex', function () {
     return view('foodsIndex');
+
 });
 
 // Route::get('/reviewcreate', function () {
@@ -67,6 +71,7 @@ Route::get('/foodsindex', function () {
 Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create');
 // 保存処理
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
+
 
 // お店登録画面のcreate機能
 // storeCreate.blade.phpの見た目を表示するためのルーティング
@@ -86,6 +91,9 @@ Route::get('/search', 'SearchController@index')->name('searches.index');
 
 // レビューの一覧機能
 Route::get('/store', 'ReviewController@index')->name('reviews.index');
+
+// レビューの削除機能
+Route::delete('/store/{review}', 'ReviewController@destroy')->name('reviews.destroy');
 
 //お店画面のRead機能
 Route::get('/stores', 'StoreController@index')->name('stores.index');

@@ -14,13 +14,13 @@ class ReviewController extends Controller
         // dd($user);
 
         $reviews = Review::all();
-        dd($reviews);
-        return view('stores/store', ['reviews'=>$reviews]);
+
+        return view('stores.store', ['reviews'=>$reviews]);
     }
 
     public function create()
     {
-        return view('reviews/reviewCreate');
+        return view('reviews.reviewCreate');
     } 
 
     public function store(Request $request)
@@ -37,5 +37,13 @@ class ReviewController extends Controller
         $review->save();
 
         return view('users.user');
+    }
+
+    public function destroy($id)
+    {
+        $review = Review::find($id);
+        $review->delete();
+
+        return redirect()->route('reviews.index');
     }
 }
