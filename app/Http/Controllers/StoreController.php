@@ -54,22 +54,7 @@ class StoreController extends Controller
     // dd($food);
 
     $stores = Store::where('genre', $genre)->where('main_dish', $maindish)->get();
-    // dd($stores);
-
-    // $stores = Store::all();
-    // dd($stores);
-
-    // dd($request);
-    // 料理一覧画面から送られてきた値を取得
-    // $genre_keyword = $request->genre;
-    // $maindish_keyword = $request->input('maindish');
-    // dd($genre);
-    // dd($main_dish);
-     // ジャンル・主菜のキーワードに該当する食べ物名を取得
-    // $foods = Food::with('genre', $genre_keyword)->where('main_dish', $maindish_keyword)->get();
-
-    // dd($food);
-
+    
     return view('stores.stores', ['stores' => $stores]);
   }
 
@@ -80,7 +65,28 @@ class StoreController extends Controller
     return view('stores.store', ['store'=>$store, 'reviews'=>$reviews]);
   }
 
-  
+  public function favoriteStore($id)
+  {
+    $store = Store::find($id);
+    // dd($store);
+
+    $favorite = new Favorite();
+
+    $favorite->name = $store->name;
+    $favorite->link = $store->link;
+    $favorite->price = $store->price;
+    $favorite->store_id = $store->id;
+    // dd($favorite->store_id);
+    
+    $favorite->user_id = 1;
+    
+
+    $favorite->save();
+
+    $favorites = Favorite::all();
+
+    return view('stores.storesIndex', ['favorites' => $favorites]);
+  }
 
    
 
