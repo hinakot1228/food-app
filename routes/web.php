@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/storesindex', function () {
-    return view('storesIndex');
-});
+// Route::get('/storesindex', function () {
+//     return view('storesIndex');
+// });
 
-Route::get('/index', function () {
-    return view('Index');
-});
+// Route::get('/index', function () {
+//     return view('Index');
+// });
 
 Route::get('/', function () {
     return view('index');
@@ -38,13 +38,13 @@ Route::get('/useredit', function () {
     return view('userEdit');
 });
 
-Route::get('/reviewcreate', function () {
-    return view('reviewCreate');
-});
+// Route::get('/reviewcreate', function () {
+//     return view('reviewCreate');
+// });
 
-Route::get('/storecreate', function () {
-    return view('storeCreate');
-});
+// Route::get('/storecreate', function () {
+//     return view('storeCreate');
+// });
 
 // Route::get('/stores', function () {
 //     return view('stores.stores');
@@ -54,9 +54,9 @@ Route::get('/storecreate', function () {
 //     return view('store');
 // });
 
-Route::get('/foodsindex', function () {
-    return view('foodsIndex');
-});
+// Route::get('/foodsindex', function () {
+//     return view('foodsIndex');
+// });
 
 // Route::get('/reviewcreate', function () {
 //     return view('reviewCreate');
