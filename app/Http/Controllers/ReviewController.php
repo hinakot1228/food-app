@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Review;
 use App\User;
+use PhpParser\Node\Expr\New_;
 
 class ReviewController extends Controller
 {
@@ -14,13 +15,13 @@ class ReviewController extends Controller
         // dd($user);
 
         $reviews = Review::all();
-        dd($reviews);
-        return view('stores/store', ['reviews'=>$reviews]);
+
+        return view('stores.store', ['reviews'=>$reviews]);
     }
 
     public function create()
     {
-        return view('reviews/reviewCreate');
+        return view('reviews.reviewCreate');
     } 
 
     public function store(Request $request)
@@ -37,5 +38,15 @@ class ReviewController extends Controller
         $review->save();
 
         return view('users.user');
+    }
+
+    public function destroy($id)
+    {
+        $review = new Review;
+        $store_id = $review->store_id;
+        $review = Review::find($id);
+        $review->delete();
+
+        return view('index');
     }
 }

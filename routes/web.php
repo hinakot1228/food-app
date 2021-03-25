@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 // Route::get('/storesindex', function () {
 //     return view('storesIndex');
 // });
@@ -21,9 +22,16 @@ use Illuminate\Support\Facades\Route;
 //     return view('Index');
 // });
 
+=======
+Route::get('/storesindex', function () {
+    return view('storesIndex');
+});
+Route::get('/index', function () {
+    return view('Index');
+});
+>>>>>>> deploy_second
 Route::get('/', function () {
     return view('index');
-
 });
 Route::get('/signup', function () {
     return view('signup');
@@ -42,21 +50,37 @@ Route::get('/useredit', function () {
 //     return view('reviewCreate');
 // });
 
+<<<<<<< HEAD
 // Route::get('/storecreate', function () {
 //     return view('storeCreate');
 // });
 
+=======
+Route::get('/storecreate', function () {
+    return view('storeCreate');
+});
+>>>>>>> deploy_second
 // Route::get('/stores', function () {
 //     return view('stores.stores');
 // });
 
+Route::get('/store', function () {
+    return view('stores.store');
+});
 // Route::get('/store', function () {
 //     return view('store');
 // });
 
+<<<<<<< HEAD
 // Route::get('/foodsindex', function () {
 //     return view('foodsIndex');
 // });
+=======
+Route::get('/foodsindex', function () {
+    return view('foodsIndex');
+
+});
+>>>>>>> deploy_second
 
 // Route::get('/reviewcreate', function () {
 //     return view('reviewCreate');
@@ -67,6 +91,7 @@ Route::get('/useredit', function () {
 Route::get('/reviews/create', 'ReviewController@create')->name('reviews.create');
 // 保存処理
 Route::post('/reviews', 'ReviewController@store')->name('reviews.store');
+
 
 // お店登録画面のcreate機能
 // storeCreate.blade.phpの見た目を表示するためのルーティング
@@ -87,6 +112,9 @@ Route::get('/search', 'SearchController@index')->name('searches.index');
 // レビューの一覧機能
 Route::get('/store', 'ReviewController@index')->name('reviews.index');
 
+// レビューの削除機能
+Route::delete('/store/{review}', 'ReviewController@destroy')->name('reviews.destroy');
+
 //お店画面のRead機能
 Route::get('/stores', 'StoreController@index')->name('stores.index');
 
@@ -100,3 +128,8 @@ Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
 // お気に入りに登録する
 Route::get('/favorites/{id}', 'StoreController@favoriteStore')->name('stores.favoriteStore');
 
+<<<<<<< HEAD
+=======
+// お気に入りの削除機能
+Route::delete('/stores/delete/{store}', 'StoreController@destroy')->name('stores.destroy');
+>>>>>>> deploy_second

@@ -74,7 +74,7 @@
                <br class="description1">「なんとなく食べたいジャンル」と「なんとなく食べたい主食の種類」を選択し、検索する。
               </div>
               <div class="howto2">
-                <img class="imgs-howto2" src="{{ asset('imgs/select-cuate.png') }}" alt="">
+                <img class="imgs-howto2" src="{{ asset('imgs/Select-cuate.png') }}" alt="">
                 <br class="description2">STEP1で選択したキーワードに該当するお店が一覧表示される。
               </div>
               <div class="howto3">
