@@ -350,3 +350,15 @@ footer {
 .fetured_food{
     font-size: x-large;
 }
+
+.store-btns{
+    display: flex;
+}
+
+.store-btns, a{
+    margin: 10px;
+}
+
+.store-btns, input{
+    margin: 10px;
+}

@@ -33,7 +33,13 @@
                             </div>
                             <div class="store-btns">
                                 <a class="btn" href= " {{ route('stores.show', $favorite->store_id)}} ">詳細</a>
-                                <a class="btn" href="">お気に入り解除</a>
+                                {{-- <a class="btn" href="{{ route('stores.destroy', $favorite->id)}}">お気に入り解除</a> --}}
+                                <form action='{{ route('stores.destroy', $favorite->id)}}' method='post'>
+                                    @csrf
+                                    @method('delete')
+                                    <input type='submit' value='お気に入り解除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？");'>
+                                </form>
+                                {{-- @csrf --}}
                                 <a class="btn" href=" {{ route('reviews.create') }} ">レビューを書く</a>
                             </div>
                         </div>

@@ -88,6 +88,12 @@ class StoreController extends Controller
     return view('stores.storesIndex', ['favorites' => $favorites]);
   }
 
-   
+  public function destroy($id)
+  {
+      $favorite = Favorite::find($id);
+      // dd($favorite);
+      $favorite->delete();
 
+      return redirect()->route('stores.index');
+  }
 }

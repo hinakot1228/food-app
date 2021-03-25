@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Review;
 use App\User;
+use PhpParser\Node\Expr\New_;
 
 class ReviewController extends Controller
 {
@@ -41,9 +42,11 @@ class ReviewController extends Controller
 
     public function destroy($id)
     {
+        $review = new Review;
+        $store_id = $review->store_id;
         $review = Review::find($id);
         $review->delete();
 
-        return redirect()->route('reviews.index');
+        return view('index');
     }
 }
