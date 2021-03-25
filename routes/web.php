@@ -111,3 +111,5 @@ Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
 
 // お気に入りに登録する
 Route::get('/favorites/{id}', 'StoreController@favoriteStore')->name('stores.favoriteStore');
+
+
