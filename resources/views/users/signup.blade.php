@@ -24,7 +24,7 @@
                     <form method="POST" action="{{--{{ route('register') }} --}}">
                         @csrf
                         <div class="signup-form">
-                            <div class="signup-left">
+                            {{-- <div class="signup-left">
                                 <div class="signup-img-group">
                                     <label for="image_at" class="form-label">プロフィール写真</label>
                                     <div class="signup-image">
@@ -40,11 +40,10 @@
                                         <img id="preview" src="{{asset('/assets/imgs/no_image.jpg')}}" class="img-preview">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="signup-right">
                                 <div class="signup-info-group">
                                     <label for="name" class="form-label">名前</label>
-        
                                     <div class="profile-info">
                                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
         
@@ -55,7 +54,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="signup-info-group">
+                                {{-- <div class="signup-info-group">
                                     <label for="birth" class="form-label">生年月日</label>
         
                                     <div class="signup-info">
@@ -67,13 +66,13 @@
                                             </span>
                                         @enderror
                                     </div>
-                                </div>
-                                <div class="signup-info-group">
+                                </div> --}}
+                                {{-- <div class="signup-info-group">
                                     <label for="sex" class="form-label">性別</label>
         
                                     <div class="signup-info">
-                                        {{-- 保留 --}}
-                                        {{-- <input id="sex" type="text" class="form-control @error('sex') is-invalid @enderror" name="sex" value="{{ old('sex') }}" required autocomplete="sex" autofocus> --}}
+                                        保留
+                                        <input id="sex" type="text" class="form-control @error('sex') is-invalid @enderror" name="sex" value="{{ old('sex') }}" required autocomplete="sex" autofocus>
 
                                         <input id="male" type="radio" name="sex" value="male"><label for="male">男性</label>
                                         <input id="female" type="radio" name="sex" value="female"><label for="female">女性</label>
@@ -85,7 +84,7 @@
                                             </span>
                                         @enderror
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="signup-info-group">
                                     <label for="email" class="form-label">メールアドレス</label>
         
@@ -119,7 +118,7 @@
                                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                     </div>
                                 </div>
-                                <div class="signup-info-group">
+                                {{-- <div class="signup-info-group">
                                     <label for="words" class="form-label">一言</label>
         
                                     <div class="signup-info">
@@ -131,13 +130,13 @@
                                             </span>
                                         @enderror
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="signup-btn">
-                            <a type="submit" class="btn signup-submit-btn">
+                            <button type="submit" class="btn signup-submit-btn">
                                 登録
-                            </a>
+                            </button>
                         </div>
                     </form>
                 </div>

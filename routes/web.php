@@ -13,53 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
-// Route::get('/storesindex', function () {
-//     return view('storesIndex');
-// });
 
-// Route::get('/index', function () {
-//     return view('Index');
-// });
-
-=======
 Route::get('/storesindex', function () {
     return view('storesIndex');
 });
 Route::get('/index', function () {
     return view('Index');
 });
->>>>>>> deploy_second
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/signup', function () {
-    return view('signup');
-});
-Route::get('/signin', function () {
-    return view('signin');
-});
-Route::get('/user', function () {
-    return view('user');
-});
-Route::get('/useredit', function () {
-    return view('userEdit');
-});
+
 
 // Route::get('/reviewcreate', function () {
 //     return view('reviewCreate');
 // });
 
-<<<<<<< HEAD
-// Route::get('/storecreate', function () {
-//     return view('storeCreate');
-// });
 
-=======
 Route::get('/storecreate', function () {
     return view('storeCreate');
 });
->>>>>>> deploy_second
 // Route::get('/stores', function () {
 //     return view('stores.stores');
 // });
@@ -71,16 +44,12 @@ Route::get('/store', function () {
 //     return view('store');
 // });
 
-<<<<<<< HEAD
-// Route::get('/foodsindex', function () {
-//     return view('foodsIndex');
-// });
-=======
+
 Route::get('/foodsindex', function () {
     return view('foodsIndex');
 
 });
->>>>>>> deploy_second
+
 
 // Route::get('/reviewcreate', function () {
 //     return view('reviewCreate');
@@ -128,8 +97,30 @@ Route::get('/stores/{store}', 'StoreController@show')->name('stores.show');
 // お気に入りに登録する
 Route::get('/favorites/{id}', 'StoreController@favoriteStore')->name('stores.favoriteStore');
 
-<<<<<<< HEAD
-=======
 // お気に入りの削除機能
 Route::delete('/stores/delete/{store}', 'StoreController@destroy')->name('stores.destroy');
->>>>>>> deploy_second
+
+// サインアップ画面
+Route::get('/signup', 'UsersController@signup')->name('users.signup');
+
+// サインイン画面
+Route::get('/signin', 'UsersController@signin')->name('users.signin');
+
+// マイページ画面
+Route::get('/mypage', 'UsersController@mypage')->name('users.mypage');
+
+// Route::get('/signup', function () {
+//     return view('signup');
+// });
+// Route::get('/signin', function () {
+//     return view('signin');
+// });
+// Route::get('/user', function () {
+//     return view('user');
+// });
+Route::get('/useredit', function () {
+    return view('userEdit');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
