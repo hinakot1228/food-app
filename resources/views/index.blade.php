@@ -14,9 +14,10 @@
       <ul class="header-right" style="list-style: none">
         <li class="how-btn"><a href="#HowTo">使い方</a></li>
         <li class="function-btn"><a href="#Function">機能</a></li>
-        <li class="signup-btn"><a href="">サインアップ</a></li>
+        {{-- <li class="signup-btn"><a href="">サインアップ</a></li>
         <li class="signin-btn"><a href="">サインイン</a></li>
-        <li class="mypage-btn"><a href="">マイページ</a></li>
+        <li class="mypage-btn"><a href="">マイページ</a></li> --}}
+        <li class="function-btn"><a href="{{ route('stores.create') }}">お店を登録する</a></li>
       </ul class="header-menu">
     </div>
     <h1 class="introduction">“今日のごはん何でもいいや…”</h1>
