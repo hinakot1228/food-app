@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>サインアップ</title>
+    <title>お店の登録</title>
     <link href="{{secure_asset('/assets/css/style.css')}}" rel="stylesheet">
 </head>
 <body>
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
-                <a href="#" class="header-logo">アプリ名</a>
+                <a href="{{url('/')}}" class="header-logo">ペコログ</a>
             </div>
         </header>
 

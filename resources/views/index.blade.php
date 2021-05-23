@@ -10,8 +10,8 @@
 <body>
   <header><a name="title"></a>
     <div class="first_view">
-      <div class="header-logo"><a href="">ペコログ</a></div>
-      <ul class="header-right" style="list-style: none">
+      <div class="header-logo"><a href="{{url('/')}}">ペコログ</a></div>
+      <ul class="header-right" style="list-style: none color:white">
         <li class="how-btn"><a href="#HowTo">使い方</a></li>
         <li class="function-btn"><a href="#Function">機能</a></li>
         {{-- <li class="signup-btn"><a href="">サインアップ</a></li>

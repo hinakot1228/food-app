@@ -12,7 +12,7 @@
     <div class="footerFixed">
         <header>
             <div class="header-wrapper">
-                <a href="#" class="header-logo">アプリ名</a>
+                <a href="{{url('/')}}" class="header-logo">ペコログ</a>
             </div>
         </header>
 
