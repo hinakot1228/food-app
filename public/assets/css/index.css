@@ -91,6 +91,9 @@ header:before{
   display: flex;
   justify-content:flex-end;
 }
+.home-btns {
+  color: white;
+}
 .introduction{
   font-size: 50px;
   margin: 10% 10% 2%;
