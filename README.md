@@ -1,61 +1,110 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# アプリケーション名
+「ペコログ」
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# 目次
+1. 制作者・担当箇所
+2. なぜ作ったのか
+3. 設計
+4. どういうページ・機能があるのか
+5. 工夫・苦労した点
+6. 追加で実装したい機能
+7. まとめ
 
-## About Laravel
+# 1. 製作者・担当箇所
+https://github.com/Imaishi-Takuya
+https://github.com/Misaki0917
+https://github.com/hinakot1228
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### https://github.com/Imaishi-Takuya
+【フロント】
+- マイページ画面
+- ユーザー情報編集画面
+- レビュー作成画面
+- ホーム画面
+【バック】
+- ユーザー情報一覧（index）機能（マイページ画面）
+- ユーザー情報編集（update）機能（ユーザー情報編集画面）
+【その他】
+- 企画立案
+- ER図作成
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### https://github.com/Misaki0917
+【フロント】
+- お店登録画面
+- お店詳細画面
+- キーワードに該当したお店一覧画面
+【バック】　
+- お店投稿（create）機能（お店登録画面）
+- お店一覧（index）機能（お気に入りに登録したお店一覧画面）
+- お店削除（delete）機能（お気に入りに登録したお店一覧画面）
+- お店の詳細情報詳細（show）機能（お店詳細画面）
+【その他】
+- 企画立案
+- テーブル定義書作成
+- マイグレーションファイル作成
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### https://github.com/hinakot1228
+【フロント】
+- サインアップ画面
+- サインイン画面
+- お気に入りに登録したお店一覧画面
+- キーワードに該当した料理一覧画面
+【バック】
+- レビュー投稿（create）機能（レビュー作成画面）
+- レビュー一覧（index）機能（お店詳細画面）
+- レビュー削除（delete）機能（お店詳細画面）
+【その他】
+- 企画立案
+- 要件定義書作成
+- UIデザイン作成
+- マイグレーションファイル作成
+- タスク管理
+- デプロイ
 
-## Learning Laravel
+2. なぜ作ったのか
+ここのお店で〇〇が食べたい！というより、
+仕事終わりになんとなく食べたいジャンル✖︎主菜を検索することで、その日のメインディッシュを検索、それが食べられるお店を表示することができるアプリケーションを作りたいと思いました。
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3. 設計
+- ER図
+![ER図スクショ](https://user-images.githubusercontent.com/74905456/119850303-63550980-bf48-11eb-9b84-a0f04e2ad989.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- テーブル定義書
+Users（ユーザー）テーブル
+![Usersテーブルスクショ](https://user-images.githubusercontent.com/74905456/119850398-7a93f700-bf48-11eb-9913-6ff0e249b9b3.png)
 
-## Laravel Sponsors
+Foods（フード）テーブル
+![Foodsテーブルスクショ](https://user-images.githubusercontent.com/74905456/119850449-85e72280-bf48-11eb-9d2c-d647f1fe2b9e.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Stores（お店）テーブル
+![Storesテーブルスクショ](https://user-images.githubusercontent.com/74905456/119850524-97302f00-bf48-11eb-8af0-9d5f51feaba7.png)
 
-### Premium Partners
+Reviews（レビュー）テーブル
+![Reviewsテーブルスクショ](https://user-images.githubusercontent.com/74905456/119850554-a0b99700-bf48-11eb-9dbd-5419a01ab415.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+Favorites（お気に入り）テーブル
+![Favoritesテーブルスクショ](https://user-images.githubusercontent.com/74905456/119850599-a9aa6880-bf48-11eb-9bb3-bc18cb2b05c1.png)
 
-## Contributing
+Food_store（フードとお店）中間テーブル
+![Food_storeテーブルスクショ](https://user-images.githubusercontent.com/74905456/119850642-b16a0d00-bf48-11eb-98be-ccf30df9470c.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# チームとして苦労した点
+- スケジュール管理
+    - ページ遷移の細かい設定を話し合わないと動きの認識が合わせられなかったこと
+    - 課題解決のために行ったこと
+      - 授業後に1時間程度話し合いの場を設けた
+      - スプレッドシートでやることリストを細分化した
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# 作成にかかった工数
+約20日（45時間くらい）
+授業日数8日
+授業中：6時間
+授業後：8時間
+それ以外：各見た目6時間
+各機能実装：25時間
+・自分たちのアプリに今後実装していきたいこと
+・開発を通じて得られたこと
+・チームとして
+スケジュール管理が大切、そして進捗確認
+分からない時に何が分からないのか早めに伝えること
+1人で作っている場合とは違い、メンバーで足並みを揃えていくこと
