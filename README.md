@@ -90,7 +90,7 @@ Food_store（フードとお店）中間テーブル
 
 # 4. ディレクションに使用したスプレッドシート（スケジュール管理表）
 ![スクリーンショット 2021-05-28 122902](https://user-images.githubusercontent.com/74905456/119925399-58ce5a80-bfb0-11eb-88d9-9ab46e7ab29c.png)
-![スクリーンショット 2021-05-28 123104](https://user-images.githubusercontent.com/74905456/119925656-d4c8a280-bfb0-11eb-9d7b-c164a80d7933.png)
+![スクリーンショット 2021-05-28 123437](https://user-images.githubusercontent.com/74905456/119925804-19543e00-bfb1-11eb-9fa7-e110bc0940a2.png)
 
 # 5. どういうページ・機能があるのか　
 - ホーム画面
