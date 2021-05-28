@@ -12,9 +12,9 @@
 8. まとめ
 
 # 1. 製作者・担当箇所
-https://github.com/Imaishi-Takuya
-https://github.com/Misaki0917
-https://github.com/hinakot1228
+- https://github.com/Imaishi-Takuya
+- https://github.com/Misaki0917
+- https://github.com/hinakot1228
 
 ### https://github.com/Imaishi-Takuya
 【フロント】
